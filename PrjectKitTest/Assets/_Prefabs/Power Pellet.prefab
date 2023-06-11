@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e54c9effdc4f2f408191575e7628b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectionSound: {fileID: 8300000, guid: 575aedf1c55588246820e625666541b2, type: 3}
   OnPelletEaten:
     m_PersistentCalls:
       m_Calls:

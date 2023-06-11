@@ -5,13 +5,14 @@ using UnityEngine;
 public class ZoneTrigger : MonoBehaviour {
 
 	[SerializeField] private Zone parent;
+	[SerializeField] private string requiredTag;
 
 	private void OnTriggerEnter(Collider other) {
-		parent.EnterZone();
+		if (string.IsNullOrEmpty(requiredTag) || other.gameObject.tag == requiredTag) parent.EnterZone();
 	}
 
 	private void OnTriggerExit(Collider other) {
-		parent.ExitZone();
+		if (string.IsNullOrEmpty(requiredTag) || other.gameObject.tag == requiredTag) parent.ExitZone();
 	}
 
 }

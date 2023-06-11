@@ -123,6 +123,102 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: f2963aa645719024f9cb28b73c15a626, type: 2}
+--- !u!1 &95411076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 95411078}
+  - component: {fileID: 95411077}
+  m_Layer: 0
+  m_Name: Music Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &95411077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95411076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6cefd9d2b9bf946b5497683312ae91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicBank: {fileID: 11400000, guid: 58524f9f9b5bddc43a240cdb84dd42f0, type: 2}
+  easeIn:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  easeOut:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  registerToAudioManager: 0
+  volume: 0.5
+  startingTrack: 0
+--- !u!4 &95411078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95411076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.8741951, y: 1.539321, z: 0.48358488}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &253477136
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,12 +317,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &711174771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 40547482201049843, guid: 4a8e710cba7e0584c85d3a92f9dcc27b,
+    type: 3}
+  m_PrefabInstance: {fileID: 40547481834152064}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &711174775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 40547482201049847, guid: 4a8e710cba7e0584c85d3a92f9dcc27b,
     type: 3}
   m_PrefabInstance: {fileID: 40547481834152064}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &711174777 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 40547482201049849, guid: 4a8e710cba7e0584c85d3a92f9dcc27b,
+    type: 3}
+  m_PrefabInstance: {fileID: 40547481834152064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711174771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd5241e6c6397242bdea4cf82074bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &711174779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711174771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90a352f84b859b44b797ec984f4d675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footsteps: {fileID: 8300000, guid: 2a5c3648bdda161478849cc7f3bc0ead, type: 3}
+  character: {fileID: 711174777}
+  volume: 0.25
 --- !u!1001 &1258539413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -418,6 +547,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 40547482201049849, guid: 4a8e710cba7e0584c85d3a92f9dcc27b,
+        type: 3}
+      propertyPath: movementSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 40547482201049849, guid: 4a8e710cba7e0584c85d3a92f9dcc27b,
+        type: 3}
+      propertyPath: acceleration.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7460476944868994504, guid: 4a8e710cba7e0584c85d3a92f9dcc27b,
         type: 3}
       propertyPath: m_Name
@@ -625,6 +764,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5649671526249603442, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
+        type: 3}
+      propertyPath: muteOnCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649671526249603442, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
+        type: 3}
+      propertyPath: overrideMusicPlayer
+      value: 
+      objectReference: {fileID: 95411077}
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}
       propertyPath: m_RootOrder
@@ -633,7 +782,7 @@ PrefabInstance:
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.4
+      value: -9.6
       objectReference: {fileID: 0}
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}
@@ -643,7 +792,7 @@ PrefabInstance:
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.13
+      value: 19.2
       objectReference: {fileID: 0}
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}

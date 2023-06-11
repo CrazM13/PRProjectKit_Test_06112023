@@ -14,6 +14,7 @@ public class MusicPlayer : MonoBehaviour {
 	[Header("Settings")]
 	[SerializeField, Tooltip("Sets as the main music player. Only one music player can be registered")] private bool registerToAudioManager = false;
 	[SerializeField, Min(0)] private float volume = 1;
+	[SerializeField, Min(0)] private int startingTrack = -1;
 
 	private AudioSource musicSource;
 	private AudioSource oldMusicSource;
@@ -24,10 +25,12 @@ public class MusicPlayer : MonoBehaviour {
 	private float MaxEaseInTime => easeIn.keys[easeIn.length - 1].time;
 	private float MaxEaseOutTime => easeOut.keys[easeOut.length - 1].time;
 
-	private void Awake() {
+	private void Start() {
 		if (registerToAudioManager) {
 			ServiceLocator.AudioManager.MusicController = this;
 		}
+
+		PlayMusic(startingTrack);
 	}
 
 	private void Update() {
