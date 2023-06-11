@@ -11,9 +11,13 @@ public class EnemyController : MonoBehaviour {
 
 	private float afraidTime = 0;
 
+	private Vector3 startPosition;
+
 	// Start is called before the first frame update
 	void Start() {
 		if (!player) player = GameObject.FindGameObjectWithTag("Player").transform;
+
+		startPosition = transform.position;
 	}
 
 	// Update is called once per frame
@@ -27,7 +31,7 @@ public class EnemyController : MonoBehaviour {
 
 			if (CheckForPlayer()) {
 				if (afraidTime > 0) {
-					Destroy(gameObject);
+					transform.position = startPosition;
 				} else {
 					ServiceLocator.SceneManager.LoadScene(ServiceLocator.SceneManager.GetCurrentSceneName());
 				}
@@ -44,8 +48,10 @@ public class EnemyController : MonoBehaviour {
 
 		if (path.corners.Length > 1) {
 			Vector3 targetLocation = path.corners[1];
+			targetLocation -= transform.position;
+			targetLocation = new Vector3(targetLocation.x, 0, targetLocation.z).normalized;
 
-			characterController.Move(targetLocation - transform.position);
+			characterController.Move(targetLocation);
 		} else {
 			Vector3 targetDirection = player.position - transform.position;
 		
@@ -62,8 +68,10 @@ public class EnemyController : MonoBehaviour {
 
 		if (path.corners.Length > 1) {
 			Vector3 targetLocation = path.corners[1];
+			targetLocation -= transform.position;
+			targetLocation = new Vector3(targetLocation.x, 0, targetLocation.z).normalized;
 
-			characterController.Move(targetLocation - transform.position);
+			characterController.Move(targetLocation);
 		} else {
 			characterController.Move(badDirection.normalized);
 		}
@@ -81,5 +89,18 @@ public class EnemyController : MonoBehaviour {
 
 	public void SetAfraid(float time) {
 		this.afraidTime = time;
+	}
+
+
+	private void OnDrawGizmosSelected() {
+		if (player) {
+			NavMeshPath path = new NavMeshPath();
+
+			NavMesh.CalculatePath(transform.position, player.position, -1, path);
+
+			foreach (Vector3 node in path.corners) {
+				Gizmos.DrawCube(node, Vector3.one * 0.25f);
+			}
+		}
 	}
 }

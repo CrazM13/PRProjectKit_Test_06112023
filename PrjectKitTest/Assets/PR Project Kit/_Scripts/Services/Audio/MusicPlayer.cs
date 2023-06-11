@@ -88,6 +88,7 @@ public class MusicPlayer : MonoBehaviour {
 		if (index >= 0) {
 			musicSource = ServiceLocator.AudioManager.Play(musicBank.GetAt(index));
 			musicSource.volume = volume;
+			musicSource.loop = true;
 		}
 
 		easeInTime = 0;

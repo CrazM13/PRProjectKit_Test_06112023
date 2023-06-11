@@ -87,6 +87,7 @@ public class BaseCharacterController : MonoBehaviour {
 	private Vector3? movementDirection;
 
 	public float CurrentSpeed => acceleration.Evaluate(movementTime) * movementSpeed * SpeedModifier;
+	public float CurrentFrameSpeed => CurrentSpeed * GameTime.GetTimeScale(timeChannel);
 
 	public float SpeedModifier => currentMovementType switch {
 		MovementType.Sprint => sprintingSpeedPercentage,
@@ -354,7 +355,7 @@ public class BaseCharacterController : MonoBehaviour {
 	}
 
 	public void WarpTo(Vector3 newPosition, bool cancelMovement = true) {
-		rigidbody.position = newPosition;
+		transform.position = newPosition;
 		if (cancelMovement) movementDirection = null;
 	}
 
