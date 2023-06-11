@@ -246,9 +246,9 @@ public class BaseCharacterController : MonoBehaviour {
 				transform.localPosition += currentJumpVelocity * GameTime.GetDeltaTime(timeChannel) * Vector3.up;
 			}
 		} else {
-			if (!CheckGrounded()) {
-				IsGrounded = false;
-			}
+			//if (!CheckGrounded()) {
+			//	IsGrounded = false;
+			//}
 
 			currentJumpVelocity = 0;
 		}

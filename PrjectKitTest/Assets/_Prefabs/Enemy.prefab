@@ -342,4 +342,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 7700063403261148307}
   player: {fileID: 0}
-  detectionRadius: 2
+  detectionRadius: 0.55
