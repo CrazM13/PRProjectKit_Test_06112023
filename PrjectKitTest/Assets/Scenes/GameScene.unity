@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.4
+    agentRadius: 0.2
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.13333334
+    cellSize: 0.06666667
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -7608,7 +7608,7 @@ PrefabInstance:
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}
@@ -13659,7 +13659,7 @@ PrefabInstance:
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}
@@ -18112,7 +18112,7 @@ PrefabInstance:
     - target: {fileID: 40547482201049847, guid: 4a8e710cba7e0584c85d3a92f9dcc27b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.03
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 40547482201049847, guid: 4a8e710cba7e0584c85d3a92f9dcc27b,
         type: 3}
@@ -26413,7 +26413,7 @@ PrefabInstance:
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}
@@ -26492,7 +26492,7 @@ PrefabInstance:
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7700063403261148305, guid: e7e293d5e1c40fd469e2d5a2fb21a2d3,
         type: 3}

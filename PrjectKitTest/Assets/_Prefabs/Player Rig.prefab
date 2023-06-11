@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 40547482201049849}
   - component: {fileID: 40547482201049848}
   - component: {fileID: 40547482201049850}
+  - component: {fileID: 3883576617568061756}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -71,7 +72,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -79,14 +80,14 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
+      time: 0.1
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -160,6 +161,21 @@ MonoBehaviour:
     overrideAxis: 9
     positiveKey: 0
     negativeKey: 0
+--- !u!114 &3883576617568061756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40547482201049843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90a352f84b859b44b797ec984f4d675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footsteps: {fileID: 8300000, guid: 2a5c3648bdda161478849cc7f3bc0ead, type: 3}
+  character: {fileID: 40547482201049849}
+  volume: 0.25
 --- !u!1 &1902616233235132561
 GameObject:
   m_ObjectHideFlags: 0
