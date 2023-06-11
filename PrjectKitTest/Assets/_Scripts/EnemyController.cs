@@ -58,7 +58,7 @@ public class EnemyController : MonoBehaviour {
 
 		Vector3 badDirection = player.position - transform.position;
 
-		NavMesh.CalculatePath(transform.position, transform.position + (-10 * badDirection), -1, path);
+		NavMesh.CalculatePath(transform.position, transform.position + (-10 * badDirection.normalized), -1, path);
 
 		if (path.corners.Length > 1) {
 			Vector3 targetLocation = path.corners[1];
