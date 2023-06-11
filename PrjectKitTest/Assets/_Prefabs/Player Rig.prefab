@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 40547482201049850}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   rotationType: 1
-  stepHeight: 0
+  stepHeight: 0.25
   jumpHeight: 0
   timeChannel: CharacterTime
   sprintingSpeedPercentage: 1.25
