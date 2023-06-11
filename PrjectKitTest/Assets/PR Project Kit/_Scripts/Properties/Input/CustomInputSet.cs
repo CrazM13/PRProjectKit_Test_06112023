@@ -19,6 +19,8 @@ public class CustomInputSet {
 
 	public float RawValue {
 		get {
+			if (overrideAxis == AxisOverrideType.Disabled) return 0;
+
 			float output = 0;
 
 			if (overrideAxis != AxisOverrideType.KeycodeOnly) {
@@ -36,6 +38,8 @@ public class CustomInputSet {
 
 	public float Value {
 		get {
+			if (overrideAxis == AxisOverrideType.Disabled) return 0;
+
 			float output = 0;
 
 			if (overrideAxis != AxisOverrideType.KeycodeOnly) {
@@ -53,6 +57,8 @@ public class CustomInputSet {
 
 	public bool IsButtonDown {
 		get {
+			if (overrideAxis == AxisOverrideType.Disabled) return false;
+
 			bool value = false;
 
 			if (overrideAxis != AxisOverrideType.KeycodeOnly) {
@@ -69,6 +75,7 @@ public class CustomInputSet {
 
 	public bool IsButton {
 		get {
+			if (overrideAxis == AxisOverrideType.Disabled) return false;
 			bool value = false;
 
 			if (overrideAxis != AxisOverrideType.KeycodeOnly) {
@@ -85,6 +92,7 @@ public class CustomInputSet {
 
 	public bool IsButtonUp {
 		get {
+			if (overrideAxis == AxisOverrideType.Disabled) return false;
 			bool value = false;
 
 			if (overrideAxis != AxisOverrideType.KeycodeOnly) {
